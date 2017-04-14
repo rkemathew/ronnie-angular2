@@ -3,6 +3,8 @@ import { PatientsService } from './patients.service';
 import { Patient } from './patient';
 import {Observable} from 'rxjs/Observable';
 
+// http://learnangular2.com/forms/
+
 @Component({
   selector: 'app-patients-list',
   templateUrl: './patients-list.component.html',
