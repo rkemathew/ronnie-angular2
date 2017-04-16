@@ -18,5 +18,6 @@ export class PatientsListComponent implements OnInit {
 
   ngOnInit() {
     this.patients = this._patientsService.getPatients();
+        console.log('after Service = ', JSON.stringify(this.patients));
   }
 }

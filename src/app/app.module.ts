@@ -10,6 +10,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { PatientsListComponent } from './patients-list/patients-list.component';
 import { ProvidersListComponent } from './providers-list/providers-list.component';
 import { FormTestComponent } from './form-test/form-test.component';
+import { FormTest2Component } from './form-test2/form-test2.component';
+import { EligibilityVerifyComponent } from './eligibility-verify/eligibility-verify.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { FormTestComponent } from './form-test/form-test.component';
     NavbarComponent,
     PatientsListComponent,
     ProvidersListComponent,
-    FormTestComponent
+    FormTestComponent,
+    FormTest2Component,
+    EligibilityVerifyComponent
   ],
   imports: [
     BrowserModule,
@@ -28,6 +32,8 @@ import { FormTestComponent } from './form-test/form-test.component';
       { path: 'patients', component: PatientsListComponent },
       { path: 'providers', component: ProvidersListComponent },
       { path: 'login', component: FormTestComponent },
+      { path: 'addUser', component: FormTest2Component },
+      { path: 'eligibility', component: EligibilityVerifyComponent },
     ])
   ],
   providers: [],
