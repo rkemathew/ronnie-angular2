@@ -12,6 +12,7 @@ import { ProvidersListComponent } from './providers-list/providers-list.componen
 import { FormTestComponent } from './form-test/form-test.component';
 import { FormTest2Component } from './form-test2/form-test2.component';
 import { EligibilityVerifyComponent } from './eligibility-verify/eligibility-verify.component';
+import { PatientEligDetailsComponent } from './patient-elig-details/patient-elig-details.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { EligibilityVerifyComponent } from './eligibility-verify/eligibility-ver
     ProvidersListComponent,
     FormTestComponent,
     FormTest2Component,
-    EligibilityVerifyComponent
+    EligibilityVerifyComponent,
+    PatientEligDetailsComponent
   ],
   imports: [
     BrowserModule,
