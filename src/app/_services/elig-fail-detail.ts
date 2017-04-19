@@ -5,7 +5,7 @@
         subFirstName: string;
         subLastName: string;
         dob: string;
-        eligInfox: string;
+        eligInfo: string;
         planCoverage: string;
         insuranceId: string;
     }

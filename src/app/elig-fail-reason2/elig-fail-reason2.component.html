@@ -1,33 +1,6 @@
 <br/>
 <div class="container">
-  <!--<h2>Patients List</h2>-->
-  <!--<p>This is a list of the Patients in the Stratus EMR System</p>-->
-      {{ patientFailElgs.patientInfo.pFirstName | async}}
-  <!--<table class="table">-->
-    <!--<thead>-->
-      <!--<tr>-->
-        <!--<th>Reason(s) for Failure:</th>-->
-        <!--<th>EMR Data</th>-->
-        <!--<th>Current Data</th>-->
-      <!--</tr>-->
-    <!--</thead>-->
-    <!--<tbody>-->
+    {{ (patientFailElgs | async)?.patientInfo.pFirstName }}
+    {{ (patientFailElgs | async)?.patientInfo.pLastName }}
 
-      <!--<tr *ngFor="let patientFailElg of patientFailElgs | async">-->
-        <!--<td>{{ patientFailElg.patientInfo.pFirstName }} </td>-->
-        <!--<td>{{ compareElig.elgData }}</td>-->
-        <!--<td>{{ compareElig.emrData }}</td>-->
-
-        <!--<td>{{ compareElig.label }}</td>-->
-        <!--<td>{{ compareElig.elgData }}</td>-->
-        <!--<td>{{ compareElig.emrData }}</td>        -->
-      <!--</tr>-->
-    <!--</tbody>-->
-  <!--</table>-->
-
-      <!--<app-elig-detail [patientDetails]="selectedPatient"></app-elig-detail>-->
-  <!--<app-elig-detail></app-elig-detail>-->
 </div>
-<!--<p>-->
-  <!--elig-failure-reason works!-->
-<!--</p>-->

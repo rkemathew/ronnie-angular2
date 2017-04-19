@@ -11,7 +11,7 @@ import { Observable } from 'rxjs/Observable';
 })
 export class EligFailureReasonComponent implements OnInit {
 
-  patientFailElgs: Observable<IEligFailDetail[]>;
+  patientFailElgs: Observable<IEligFailDetail>;
   constructor(private patientEligFailService: PatientEligFailService) { }
 
   ngOnInit() {
