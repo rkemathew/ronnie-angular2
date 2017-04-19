@@ -1,0 +1,32 @@
+<div *ngIf="patientDetails">
+<!--<p>-->
+  <!--patient-elig-details works!-->
+    <!--{{ patientDetails.patientInfo.mrn }}-->
+  <table border="2" class="table">
+  <p><b>Plan Coverage:</b> {{patientDetails.patientInfo.planCoverage}}</p>
+  <p><b>MRN:</b> {{patientDetails.patientInfo.mrn}}</p>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Benefit Amt</th>
+        <th>Benefit %</th>
+        <th>Message</th>
+        <th>Reason Amt</th>
+        <th>Service</th>
+        <th>Coverage</th>
+      </tr>
+    </thead>
+    <tbody>
+   <tr *ngFor="let patientBenefit of patientDetails.benefit ">
+    <td>{{patientBenefit.benefitAmount}}</td>
+    <td>{{patientBenefit.benefitPercent}}</td>
+    <td>{{patientBenefit.eligMessage}}</td>
+    <td>{{patientBenefit.reason}}</td>
+    <td>{{patientBenefit.service}}</td>
+    <td>{{patientBenefit.coverage}}</td>
+   </tr>
+    </tbody>
+  </table>
+  </table>
+<!--</p>-->
+</div>

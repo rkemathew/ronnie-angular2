@@ -13,6 +13,8 @@ import { FormTestComponent } from './form-test/form-test.component';
 import { FormTest2Component } from './form-test2/form-test2.component';
 import { EligibilityVerifyComponent } from './eligibility-verify/eligibility-verify.component';
 import { PatientEligDetailsComponent } from './patient-elig-details/patient-elig-details.component';
+import { EligFailureReasonComponent } from './elig-failure-reason/elig-failure-reason.component';
+import { EligFailReason2Component } from './elig-fail-reason2/elig-fail-reason2.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { PatientEligDetailsComponent } from './patient-elig-details/patient-elig
     FormTestComponent,
     FormTest2Component,
     EligibilityVerifyComponent,
-    PatientEligDetailsComponent
+    PatientEligDetailsComponent,
+    EligFailureReasonComponent,
+    EligFailReason2Component
   ],
   imports: [
     BrowserModule,
@@ -36,6 +40,7 @@ import { PatientEligDetailsComponent } from './patient-elig-details/patient-elig
       { path: 'login', component: FormTestComponent },
       { path: 'addUser', component: FormTest2Component },
       { path: 'eligibility', component: EligibilityVerifyComponent },
+      { path: 'eligFailDetail', component: EligFailReason2Component },
     ])
   ],
   providers: [],

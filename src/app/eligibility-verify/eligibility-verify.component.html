@@ -1,0 +1,33 @@
+<br/>
+<div class="container">
+  <h2>Patients List</h2>
+  <p>This is a list of the Patients in the Stratus EMR System</p>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Eligibile</th>
+        <th>MRN</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Sub First Name</th>
+        <th>Sub Last Name</th>
+        <th>DOB</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let patientElg of patientElgs | async">
+        <td>{{ patientElg.patientInfo.eligInfo }}</td>
+        <td>{{ patientElg.patientInfo.mrn }}</td>
+        <td>{{ patientElg.patientInfo.pFirstName }}</td>
+        <td>{{ patientElg.patientInfo.pLastName }}</td>
+        <td>{{ patientElg.patientInfo.subFirstName }}</td>
+        <td>{{ patientElg.patientInfo.subLastName }}</td>
+        <td>{{ patientElg.patientInfo.dob }}</td>
+        <td><button (click)="onSelect(patientElg)">Select</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+      <app-elig-detail [patientDetails]="selectedPatient"></app-elig-detail>
+  <!--<app-elig-detail></app-elig-detail>-->
+</div>
