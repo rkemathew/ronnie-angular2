@@ -15,9 +15,15 @@ export class PatientEligFailService {
 
   constructor(private http: Http) { }
 
-  getPatientElgFails(): Observable<IEligFailDetail[]> {
+  getPatientElgFails(): Observable<IEligFailDetail> {
     return this.http
       .get(this.patientsElgServiceUrl)
-      .map(response => response.json() as IEligFailDetail[]);
+      .map(response => response.json() as IEligFailDetail)
+      .catch(this.handleError);
+  }
+
+    public handleError(error: Response) {
+    console.error(error);
+    return Observable.throw(error.json().error || 'Server error');
   }
 }

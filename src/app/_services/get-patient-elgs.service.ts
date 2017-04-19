@@ -11,7 +11,7 @@ export class PatientElgsService {
 
 */
     // patientsElgFailServiceUrl = 'http://localhost:3000/eligFail';
-  // patientsElgServiceUrl = 'http://localhost:3000/elgInfo';
+  // patientsElgServiceUrl = 'http://localhost:3000/eligFail';
   patientsElgServiceUrl = 'http://localhost:3000/elgInfo';
   constructor(
     private http: Http

@@ -5,7 +5,7 @@
         subFirstName: string;
         subLastName: string;
         dob: string;
-        eligInfo: string;
+        eligInfox: string;
         planCoverage: string;
         insuranceId: string;
     }
@@ -18,6 +18,7 @@
 
     export interface IEligFailDetail {
         batchId: string;
+        insLink: string;
         patientInfo: IPatientInfo;
         cmpData: ICmpData[];
     }
