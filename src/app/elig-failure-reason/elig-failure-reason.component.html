@@ -1,7 +1,10 @@
 <br/>
 <div class="container">
-  <h2>Patients List</h2>
+  <h2>Patients List 2</h2>
   <p>This is a list of the Patients in the Stratus EMR System</p>
+  Patient Name:
+    {{ (patientFailElgs | async)?.patientInfo.pFirstName }}
+    {{ (patientFailElgs | async)?.patientInfo.pLastName }}
   <table class="table">
     <thead>
       <tr>
@@ -10,17 +13,15 @@
         <th>Current Data</th>
       </tr>
     </thead>
-    <tbody>
-      <tr *ngFor="let patientFailElg of patientFailElgs | async">
-        <td>{{ patientFailElg.label }}</td>
-        <td>{{ patientFailElg.emrData }}</td>
-        <td>{{ patientFailElg.elgData }}</td>
-      </tr>
+       <tbody>
+          <tr *ngFor="let compareData of (patientFailElgs | async)?.cmpData ">
+            <td>{{ compareData.label}}</td>
+            <td>{{ compareData.emrData}}</td>
+            <td>{{ compareData.elgData}}</td>
+          </tr>
     </tbody>
   </table>
 
       <!--<app-elig-detail [patientDetails]="selectedPatient"></app-elig-detail>-->
   <!--<app-elig-detail></app-elig-detail>-->
-</div><p>
-  elig-failure-reason works!
-</p>
+</div>

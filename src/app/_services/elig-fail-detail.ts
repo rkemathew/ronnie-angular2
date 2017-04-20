@@ -1,4 +1,4 @@
-    export interface IPatientInfo {
+    export interface PatientInfo {
         mrn: string;
         pFirstName: string;
         pLastName: string;
@@ -10,7 +10,7 @@
         insuranceId: string;
     }
 
-    export interface ICmpData {
+    export interface CmpData {
         label: string;
         emrData: string;
         elgData: string;
@@ -19,8 +19,8 @@
     export interface IEligFailDetail {
         batchId: string;
         insLink: string;
-        patientInfo: IPatientInfo;
-        cmpData: ICmpData[];
+        patientInfo: PatientInfo;
+        cmpData: CmpData[];
     }
 
 

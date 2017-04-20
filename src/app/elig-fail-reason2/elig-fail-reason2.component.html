@@ -2,5 +2,20 @@
 <div class="container">
     {{ (patientFailElgs | async)?.patientInfo.pFirstName }}
     {{ (patientFailElgs | async)?.patientInfo.pLastName }}
-
+     <table class="table">
+    <thead>
+      <tr>
+        <th>Reason(s) for Failure:</th>
+        <th>EMR Data</th>
+        <th>Eligibility Data</th>
+      </tr>
+      </thead>
+       <tbody>
+          <tr *ngFor="let compareData of (patientFailElgs | async)?.cmpData ">
+            <td>{{ compareData.label | async}}</td>
+            <td>{{ compareData.emrData  | async}}</td>
+            <td>{{ compareData.elgData  | async}}</td>
+          </tr>
+        </tbody>
+  </table>
 </div>

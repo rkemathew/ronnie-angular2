@@ -12,10 +12,12 @@ import { Observable } from 'rxjs/Observable';
 export class EligFailureReasonComponent implements OnInit {
 
   patientFailElgs: Observable<IEligFailDetail>;
+    // compareEligs:  CmpData[];
   constructor(private patientEligFailService: PatientEligFailService) { }
 
   ngOnInit() {
       this.patientFailElgs = this.patientEligFailService.getPatientElgFails();
+      // this.compareEligs = this.patientFailElgs.
       console.log('after Fail Service = ', JSON.stringify(this.patientFailElgs));
   }
 

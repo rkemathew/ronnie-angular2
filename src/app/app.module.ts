@@ -40,7 +40,7 @@ import { EligFailReason2Component } from './elig-fail-reason2/elig-fail-reason2.
       { path: 'login', component: FormTestComponent },
       { path: 'addUser', component: FormTest2Component },
       { path: 'eligibility', component: EligibilityVerifyComponent },
-      { path: 'eligFailDetail', component: EligFailReason2Component },
+      { path: 'eligFailDetail', component: EligFailureReasonComponent },
     ])
   ],
   providers: [],

@@ -16,6 +16,7 @@ export class PatientEligFailService {
   constructor(private http: Http) { }
 
   getPatientElgFails(): Observable<IEligFailDetail> {
+// getPatientElgFails(): Promise<IEligFailDetail> {
     return this.http
       .get(this.patientsElgServiceUrl)
       .map(response => response.json() as IEligFailDetail);

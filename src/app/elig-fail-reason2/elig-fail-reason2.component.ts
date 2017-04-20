@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PatientEligFailService } from './../_services/patient-elig-fail.service';
-import { IEligFailDetail, ICmpData } from './../_services/elig-fail-detail';
+import { IEligFailDetail } from './../_services/elig-fail-detail';
 import {Observable} from 'rxjs/Observable';
 
 
@@ -12,8 +12,8 @@ import {Observable} from 'rxjs/Observable';
 })
 export class EligFailReason2Component implements OnInit {
 
-  patientFailElgs: Observable<IEligFailDetail>;
-  compareEligs:  ICmpData[];
+  public patientFailElgs: Observable<IEligFailDetail>;
+  // compareEligs:  CmpData[];
   constructor(private patientEligFailService: PatientEligFailService) { }
 
   ngOnInit() {
